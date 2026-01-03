@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELORA | Products</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FONT & ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <a href="index.html" class="logo">VELORA</a>
+
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="product.html" class="active">Brands</a></li>
+    <li><a href="product-detail.html">Order</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <a href="auth.html"><i class="fa-regular fa-user"></i></a>
+    <a href="auth.html" class="join">Join Now</a>
+  </div>
+</nav>
+
+<!-- ================= TITLE ================= -->
+<section class="product-title">
+  <h1>KAMU MUNGKIN JUGA SUKA INI</h1>
+</section>
+
+<!-- ================= PRODUCT ================= -->
+<section class="product-section">
+  <div class="product-grid">
+
+    <!-- PRODUCT 1 -->
+    <div class="product-card">
+      <img src="img/product1.png" onclick="openPopup(this.src)">
+      <span class="tag">T-Shirt Oversize HD</span>
+      <h3>T-Shirt Oversize Antelope Black Unisex</h3>
+      <div class="price">
+        <span class="new">Rp 103.000</span>
+        <span class="old">Rp 300.000</span>
+      </div>
+      <a href="product-detail.html">
+        <button class="buy-btn">BELI</button>
+      </a>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product-card">
+      <img src="img/product2.png" onclick="openPopup(this.src)">
+      <span class="tag">Short Shirt</span>
+      <h3>Short Shirt Rayon Jazlyn Black Unisex</h3>
+      <div class="price">
+        <span class="new">Rp 118.000</span>
+        <span class="old">Rp 350.000</span>
+      </div>
+      <a href="product-detail.html">
+        <button class="buy-btn">BELI</button>
+      </a>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="product-card">
+      <img src="img/product3.png" onclick="openPopup(this.src)">
+      <span class="tag">Short Shirt Pocket</span>
+      <h3>Short Shirt Pocket Dalwyn Brown</h3>
+      <div class="price">
+        <span class="new">Rp 145.000</span>
+        <span class="old">Rp 145.000</span>
+      </div>
+      <a href="product-detail.html">
+        <button class="buy-btn">BELI</button>
+      </a>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="product-card">
+      <img src="img/product4.png" onclick="openPopup(this.src)">
+      <span class="tag">Chino Pants</span>
+      <h3>Chino Pants Alexa Navy Unisex</h3>
+      <div class="price">
+        <span class="new">Rp 183.000</span>
+        <span class="old">Rp 500.000</span>
+      </div>
+      <a href="product-detail.html">
+        <button class="buy-btn">BELI</button>
+      </a>
+    </div>
+
+    <!-- EXTRA (HIDDEN) -->
+    <div class="product-card hidden">
+      <img src="img/product5.png" onclick="openPopup(this.src)">
+      <span class="tag">T-Shirt</span>
+      <h3>T-Shirt Casual White</h3>
+      <div class="price">
+        <span class="new">Rp 110.000</span>
+        <span class="old">Rp 250.000</span>
+      </div>
+      <a href="product-detail.html">
+        <button class="buy-btn">BELI</button>
+      </a>
+    </div>
+
+    <div class="product-card hidden">
+      <img src="img/product6.png" onclick="openPopup(this.src)">
+      <span class="tag">Jacket</span>
+      <h3>Urban Jacket Black</h3>
+      <div class="price">
+        <span class="new">Rp 320.000</span>
+        <span class="old">Rp 600.000</span>
+      </div>
+      <a href="product-detail.html">
+        <button class="buy-btn">BELI</button>
+      </a>
+    </div>
+
+    <div class="product-card hidden">
+      <img src="img/product7.png" onclick="openPopup(this.src)">
+      <span class="tag">Pants</span>
+      <h3>Slim Fit Pants Grey</h3>
+      <div class="price">
+        <span class="new">Rp 210.000</span>
+        <span class="old">Rp 400.000</span>
+      </div>
+      <a href="product-detail.html">
+        <button class="buy-btn">BELI</button>
+      </a>
+    </div>
+
+    <div class="product-card hidden">
+      <img src="img/product8.png" onclick="openPopup(this.src)">
+      <span class="tag">Shirt</span>
+      <h3>Classic Shirt Brown</h3>
+      <div class="price">
+        <span class="new">Rp 170.000</span>
+        <span class="old">Rp 300.000</span>
+      </div>
+      <a href="product-detail.html">
+        <button class="buy-btn">BELI</button>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- SHOW MORE -->
+  <div class="show-more">
+    <button id="toggleBtn" onclick="toggleProduct()">Show More</button>
+  </div>
+</section>
+
+<!-- ================= BANNER ================= -->
+<section class="about-banner">
+  <img src="img/banner-fashion.png">
+  <div class="banner-text">
+    <h2>
+      TREN CASUAL FASHION TERUS BERKEMBANG.<br>
+      JANGAN MAU KETINGGALAN!
+    </h2>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-grid">
+
+    <div class="footer-col">
+      <h3 class="footer-logo">VELORA</h3>
+      <p>Lokasi Toko</p>
+      <p>Tentang Kami</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>BANTUAN</h3>
+      <p>FAQ</p>
+      <p>Pembayaran</p>
+      <p>Penukaran & Pengembalian</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>CUSTOMER</h3>
+      <p>Lacak Pesanan</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>PRODUK</h3>
+      <p>Kaos</p>
+      <p>Kemeja</p>
+      <p>Celana</p>
+    </div>
+
+    <div class="footer-col footer-right">
+      <h3 class="footer-logo">VELORA</h3>
+
+      <p class="footer-sub">Follow Kami</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+
+      <p class="footer-sub">Hubungi Kami</p>
+      <p>0831-9757-222</p>
+      <p>partnership@velora.co.id</p>
+
+      <div class="footer-divider"></div>
+
+      <p class="footer-legal">
+        Layanan Pengaduan Konsumen<br>
+        Kementerian Perdagangan RI<br>
+        0853-111-1010 (WhatsApp)
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ================= POPUP ================= -->
+<div class="popup" id="popup">
+  <span onclick="closePopup()">✕</span>
+  <img id="popupImg" onclick="toggleZoom()">
+</div>
+
+<script>
+let expanded = false;
+let zoomed = false;
+
+function toggleProduct() {
+  document.querySelectorAll('.hidden').forEach(el => {
+    el.style.display = expanded ? 'none' : 'block';
+  });
+  document.getElementById('toggleBtn').innerText = expanded ? 'Show More' : 'Show Less';
+  expanded = !expanded;
+}
+
+function openPopup(src) {
+  document.getElementById('popup').style.display = 'flex';
+  document.getElementById('popupImg').src = src;
+}
+
+function closePopup() {
+  document.getElementById('popup').style.display = 'none';
+  document.getElementById('popupImg').classList.remove('zoom');
+  zoomed = false;
+}
+
+function toggleZoom() {
+  zoomed = !zoomed;
+  document.getElementById('popupImg').classList.toggle('zoom');
+}
+</script>
+
+</body>
+</html>

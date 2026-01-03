@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register – VELORA</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Platypi:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="logo">VELORA</a>
+
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="product.html">Brands</a></li>
+    <li><a href="product-detail.html">Order</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <a href="auth.html" class="fa-regular fa-user"></i>
+    <a href="auth.html" class="join">Join Now</a>
+  </div>
+</nav>
+
+<!-- AUTH -->
+<section class="auth-wrapper">
+  <div class="auth-card">
+
+    <!-- LEFT -->
+    <div class="auth-left">
+      <h1>VELORA</h1>
+      <p>
+        Timeless casual fashion for modern lifestyle.<br>
+        Elegance, confidence, and premium quality.
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="auth-right">
+
+      <div class="auth-tabs">
+        <button class="active" id="loginTab">Login</button>
+        <button id="registerTab">Register</button>
+      </div>
+
+      <!-- LOGIN -->
+      <form class="form active" id="loginForm">
+        <h2>Welcome Back</h2>
+        <p class="subtitle">Masuk untuk pengalaman belanja premium</p>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button type="submit">LOGIN</button>
+      </form>
+
+      <!-- REGISTER -->
+      <form class="form" id="registerForm">
+        <h2>Create Account</h2>
+        <p class="subtitle">Daftar untuk menjadi bagian dari Velora</p>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <button type="submit">REGISTER</button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- BANNER -->
+<section class="about-banner">
+  <img src="img/banner-fashion.png" alt="Velora Banner">
+  <div class="banner-text">
+    <h2>
+      TREN CASUAL FASHION TERUS BERKEMBANG.<br>
+      JANGAN MAU KETINGGALAN!
+    </h2>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+
+    <div>
+      <h3 class="footer-logo">VELORA</h3>
+      <p>Lokasi Toko</p>
+      <p>Tentang Kami</p>
+    </div>
+
+    <div>
+      <h3>BANTUAN</h3>
+      <p>FAQ</p>
+      <p>Pembayaran</p>
+      <p>Penukaran & Pengembalian</p>
+      <p>Kebijakan Privasi</p>
+    </div>
+
+    <div>
+      <h3>CUSTOMER</h3>
+      <p>Lacak Pesanan</p>
+    </div>
+
+    <div>
+      <h3>PRODUK</h3>
+      <p>Kaos</p>
+      <p>Kemeja</p>
+      <p>Celana</p>
+      <p>Aksesoris</p>
+    </div>
+
+    <div class="footer-col footer-right">
+      <h3 class="footer-logo">VELORA</h3>
+
+      <p class="footer-sub">Follow Kami</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+
+      <p class="footer-sub">Hubungi Kami</p>
+      <p>0831-9757-222</p>
+      <p>partnership@velora.co.id</p>
+
+      <div class="footer-divider"></div>
+
+      <p class="footer-legal">
+        Layanan Pengaduan Konsumen<br>
+        Kementerian Perdagangan RI<br>
+        0853-111-1010 (WhatsApp)
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+  const loginTab = document.getElementById("loginTab");
+  const registerTab = document.getElementById("registerTab");
+  const loginForm = document.getElementById("loginForm");
+  const registerForm = document.getElementById("registerForm");
+
+  loginTab.onclick = () => {
+    loginTab.classList.add("active");
+    registerTab.classList.remove("active");
+    loginForm.classList.add("active");
+    registerForm.classList.remove("active");
+  };
+
+  registerTab.onclick = () => {
+    registerTab.classList.add("active");
+    loginTab.classList.remove("active");
+    registerForm.classList.add("active");
+    loginForm.classList.remove("active");
+  };
+</script>
+
+</body>
+</html>
